@@ -1,0 +1,14 @@
+This is the repository for removing excess/redundant packages.
+
+NOTE: Removing GNOME packages should be done in the ui-gnome repository.
+
+LMDE requires a DVD and is over 1 GB in size.  Swift Linux needs to be under 700 MB to fit onto a CD.
+
+Go to https://github.com/swiftlinux/z-antix-remove_packages for the old version of this repository.  This will give
+you an idea of what to remove.
+
+Other distros to look to for examples of what to keep and what to remove are:
+antiX Linux - full version
+Puppy Linux
+Linux Mint with LXDE
+Linux Mint with Fluxbox
