@@ -1,0 +1,6 @@
+Multimedia: 
+Keep the VLC and MPlayer media players
+Remove GNOME MPlayer and Totem
+
+Network:
+Keep nm-applet
