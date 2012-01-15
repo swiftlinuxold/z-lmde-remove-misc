@@ -25,7 +25,60 @@ else:
 print '======================='
 print 'BEGIN REMOVING PACKAGES'
 
-os.system('apt-get remove -y gimp')
+# Remove GIMP
+os.system('apt-get remove -y gimp gimp-data')
+os.system('apt-get remove -y libgimp2.0')
+
+# Remove LibreOffice Base
+os.system('apt-get remove -y libreoffice libreoffice-base libreoffice-report-builder-bin')
+
+# Remove LibreOffice Draw and Impress
+os.system('apt-get remove -y libreoffice-draw libreoffice-impress')
+
+# Remove LibreOffice Math
+os.system('apt-get remove -y libreoffice-math')
+
+# Remove other LibreOffice packages
+os.system('apt-get remove -y libreoffice-emailmerge')
+os.system('apt-get remove -y libreoffice-filter-mobiledev')      
+os.system('apt-get remove -y libreoffice-gnome')      
+os.system('apt-get remove -y libreoffice-gtk')      
+os.system('apt-get remove -y libreoffice-java-common')      
+os.system('apt-get remove -y python-uno')
+
+# Remove admin packages
+os.system('apt-get remove -y mint-backgrounds-debian mint-backgrounds-katya mint-backgrounds-katya-extra')
+os.system('apt-get remove -y mint-stylish-addon')
+os.system('apt-get remove -y mintwelcome')
+
+# Remove editors
+os.system('apt-get remove -y nano vim-common vim-tiny')
+
+# Remove embedded
+os.system('apt-get remove -y tsconf')
+
+# Remove fonts
+os.system('apt-get remove -y ttf-bengali-fonts')
+os.system('apt-get remove -y ttf-gujarati-fonts')
+os.system('apt-get remove -y ttf-punjabi-fonts')
+os.system('apt-get remove -y ttf-sazanami-gothic')
+os.system('apt-get remove -y ttf-sazanami-mincho')
+os.system('apt-get remove -y ttf-tamil-fonts')
+os.system('apt-get remove -y ttf-telugu-fonts')
+
+# Remove graphics
+os.system('apt-get remove -y gtk2-engines-pixbuf')
+
+# Remove httpd
+os.system('apt-get remove -y apache2.2-bin libapache2-mod-dnssd')
+
+# Remove java packages
+os.system('apt-get remove -y liblucene2-java')
+
+# Remove lisp
+os.system('apt-get remove -y guile-1.8-libs')
+
+
 
 print 'FINISHED REMOVING PACKAGES'
 print '======================='
