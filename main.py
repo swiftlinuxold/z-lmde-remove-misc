@@ -64,7 +64,7 @@ os.system('apt-get remove -y ttf-tamil-fonts')
 os.system('apt-get remove -y ttf-telugu-fonts')
 
 # Remove graphics
-os.system('apt-get remove -y gtk2-engines-pixbuf')
+# os.system('apt-get remove -y gtk2-engines-pixbuf')
 
 # Remove httpd
 os.system('apt-get remove -y apache2.2-bin libapache2-mod-dnssd')
@@ -73,7 +73,7 @@ os.system('apt-get remove -y apache2.2-bin libapache2-mod-dnssd')
 os.system('apt-get remove -y liblucene2-java')
 
 # Remove lisp
-# os.system('apt-get remove -y guile-1.8-libs')
+ os.system('apt-get remove -y guile-1.8-libs')
 
 
 
