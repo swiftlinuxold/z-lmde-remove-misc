@@ -55,28 +55,28 @@ os.system('apt-get remove -y mintwelcome')
 os.system('apt-get remove -y nano vim-common vim-tiny')
 
 # Remove embedded
-os.system('apt-get remove -y tsconf')
+# os.system('apt-get remove -y tsconf')
 
 # Remove fonts
-os.system('apt-get remove -y ttf-bengali-fonts')
-os.system('apt-get remove -y ttf-gujarati-fonts')
-os.system('apt-get remove -y ttf-punjabi-fonts')
-os.system('apt-get remove -y ttf-sazanami-gothic')
-os.system('apt-get remove -y ttf-sazanami-mincho')
-os.system('apt-get remove -y ttf-tamil-fonts')
-os.system('apt-get remove -y ttf-telugu-fonts')
+# os.system('apt-get remove -y ttf-bengali-fonts')
+# os.system('apt-get remove -y ttf-gujarati-fonts')
+# os.system('apt-get remove -y ttf-punjabi-fonts')
+# os.system('apt-get remove -y ttf-sazanami-gothic')
+# os.system('apt-get remove -y ttf-sazanami-mincho')
+# os.system('apt-get remove -y ttf-tamil-fonts')
+# os.system('apt-get remove -y ttf-telugu-fonts')
 
 # Remove graphics
-os.system('apt-get remove -y gtk2-engines-pixbuf')
+# os.system('apt-get remove -y gtk2-engines-pixbuf')
 
 # Remove httpd
-os.system('apt-get remove -y apache2.2-bin libapache2-mod-dnssd')
+# os.system('apt-get remove -y apache2.2-bin libapache2-mod-dnssd')
 
 # Remove java packages
-os.system('apt-get remove -y liblucene2-java')
+# os.system('apt-get remove -y liblucene2-java')
 
 # Remove lisp
-os.system('apt-get remove -y guile-1.8-libs')
+# os.system('apt-get remove -y guile-1.8-libs')
 
 
 
