@@ -25,6 +25,10 @@ else:
 print '============================'
 print 'BEGIN REMOVING MISC PACKAGES'
 
+# Handy commands
+# deborphan -n (package name)
+# sudo apt-get purge -s (package name): simulation only
+
 # Remove Thunderbird (email suite)
 os.system('apt-get purge -y thunderbird thunderbird-l10n-en-us')
 
@@ -36,19 +40,15 @@ os.system('apt-get purge -y gimp gimp-data libgimp2.0')
 os.system('apt-get purge -y cups-driver-gutenprint libgutenprint2')
 os.system('apt-get purge -y libgtk2-perl libgnome2-canvas-perl libgnome2-perl')
 
+# Remove Giver
+os.system('apt-get purge -y giver')
+
 # Remove Samba
 os.system('apt-get purge -y samba samba-common samba-common-bin')
 
 # Remove Telepathy
 os.system('apt-get purge -y libtelepathy-glib0 vino')
 os.system('apt-get purge -y telepathy-mission-control-5 telepathy-gabble telepathy-salut')
-      
-      
-     
-      
-
-
-# Remove C compilers (GCC, etc.)
 
 # Remove selected packages from the editors section
 os.system('apt-get purge -y nano vim-common vim-tiny')
@@ -89,10 +89,23 @@ os.system('apt-get purge -y grub2-theme-mint')
 os.system('apt-get purge -y mint-backgrounds-debian mint-backgrounds-katya mint-backgrounds-katya-extra')
 os.system('apt-get purge -y mint-stylish-addon')
 
+# Remove Python 3.2
+os.system('apt-get purge -y python3.2 python3 python3-apt wajig')
+os.system('apt-get purge -y python3.2-minimal python3-minimal')
 
 
+# Remove Python 2.7
+os.system('apt-get purge -y python2.7 python-parted python2.7-minimal')
 
+# Remove selected GCC packages
+os.system('apt-get purge -y gcc g++ build-essential dkms ndiswrapper-dkms')
+os.system('apt-get purge -y gcc-4.3-base')
+os.system('apt-get purge -y gcc-4.6 g++ g++-4.6  libstdc++6-4.6-dev')
       
+# Removing selected LibreOffice packages
+os.system('apt-get purge -y libreoffice libreoffice-emailmerge libreoffice-gnome python-uno')
+
+
 
 #def purge1(package):
 #    print 'FAKEpurging ' + package
