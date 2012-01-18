@@ -31,7 +31,14 @@ os.system('apt-get purge -y thunderbird thunderbird-l10n-en-us')
 # Remove XChat
 os.system('apt-get purge -y xchat-common xchat')
       
+# Remove GIMP
+os.system('apt-get purge -y gimp gimp-data libgimp2.0')
+os.system('apt-get purge -y cups-driver-gutenprint libgutenprint2')
+os.system('apt-get purge -y libgtk2-perl libgnome2-canvas-perl libgnome2-perl')
+
       
+      
+
 
 
 
