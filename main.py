@@ -25,13 +25,26 @@ else:
 print '============================'
 print 'BEGIN REMOVING MISC PACKAGES'
 
+# Remove Thunderbird (email suite)
+os.system('apt-get purge -y thunderbird thunderbird-l10n-en-us')
 
-def purge_packages(file):
-    for line in open(file):
-        print 'PURGING ' + line
-        os.system('apt-get purge -s ' + line)
+# Remove XChat
+os.system('apt-get purge -y xchat-common xchat')
+      
+      
 
-purge_packages("lmde_not_lxde.txt")
+
+
+#def purge1(package):
+#    print 'FAKEpurging ' + package
+#    os.system('apt-get purge -y ' + package)
+
+#def purge_packages_2(file):
+#    for line in open(file):
+#        print 'PURGING ' + line
+#        os.system('apt-get purge -s ' + line)
+
+# purge_packages_2("lmde_not_lxde.txt")
 # purge_packages("lmde_not_fluxbox.txt")
 
 print 'FINISHED REMOVING MISC PACKAGES'
