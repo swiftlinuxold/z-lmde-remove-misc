@@ -37,11 +37,11 @@ os.system('apt-get purge -y cups-driver-gutenprint libgutenprint2')
 os.system('apt-get purge -y libgtk2-perl libgnome2-canvas-perl libgnome2-perl')
 
 # Remove Samba
-os.system('apt-get remove -y samba samba-common samba-common-bin')
+os.system('apt-get purge -y samba samba-common samba-common-bin')
 
 # Remove Telepathy
-os.system('apt-get remove -y libtelepathy-glib0 vino')
-os.system('apt-get remove -y telepathy-mission-control-5 telepathy-gabble telepathy-salut')
+os.system('apt-get purge -y libtelepathy-glib0 vino')
+os.system('apt-get purge -y telepathy-mission-control-5 telepathy-gabble telepathy-salut')
       
       
      
@@ -51,36 +51,47 @@ os.system('apt-get remove -y telepathy-mission-control-5 telepathy-gabble telepa
 # Remove C compilers (GCC, etc.)
 
 # Remove selected packages from the editors section
-os.system('apt-get remove -y nano vim-common vim-tiny')
+os.system('apt-get purge -y nano vim-common vim-tiny')
 
 # Remove selected packages from the font section
-os.system('apt-get remove -y ttf-bengali-fonts')
-os.system('apt-get remove -y ttf-gujarati-fonts')
-os.system('apt-get remove -y ttf-punjabi-fonts')
-os.system('apt-get remove -y ttf-sazanami-gothic')
-os.system('apt-get remove -y ttf-sazanami-mincho')
-os.system('apt-get remove -y ttf-tamil-fonts')
-os.system('apt-get remove -y ttf-telugu-fonts')
+os.system('apt-get purge -y ttf-bengali-fonts')
+os.system('apt-get purge -y ttf-gujarati-fonts')
+os.system('apt-get purge -y ttf-punjabi-fonts')
+os.system('apt-get purge -y ttf-sazanami-gothic')
+os.system('apt-get purge -y ttf-sazanami-mincho')
+os.system('apt-get purge -y ttf-tamil-fonts')
+os.system('apt-get purge -y ttf-telugu-fonts')
 
 # Remove packages from httpd section
-os.system('apt-get remove -y apache2.2-bin libapache2-mod-dnssd')
+os.system('apt-get purge -y apache2.2-bin libapache2-mod-dnssd')
 
 # Remove selected packages (cpp) from the interpreter section
-os.system('apt-get remove -y cpp-4.3 gcc-4.3')
+os.system('apt-get purge -y cpp-4.3 gcc-4.3')
 
 # Remove packages from lisp section
-os.system('apt-get remove -y guile-1.8-libs')
+os.system('apt-get purge -y guile-1.8-libs')
 
 # Remove selected packages from the mail section
-os.system('apt-get remove -y exim4-config procmail')
+os.system('apt-get purge -y exim4-config procmail')
 
 # Remove selected packages from the math section
-os.system('apt-get remove -y dc')
+os.system('apt-get purge -y dc')
 
-# Remove packages from ruby section
-os.system('apt-get remove -y libdpkg-ruby1.8 libgettext-ruby1.8 liblocale-ruby1.8')
-os.system('apt-get remove -y libhttpclient-ruby1.8 libxml-parser-ruby1.8')
-os.system('apt-get remove -y ruby ruby-xmlparser ruby1.8')      
+# Remove packages from ruby section and selected other Ruby packages
+os.system('apt-get purge -y libdpkg-ruby1.8 libgettext-ruby1.8 liblocale-ruby1.8')
+os.system('apt-get purge -y libhttpclient-ruby1.8 libxml-parser-ruby1.8')
+os.system('apt-get purge -y ruby ruby-xmlparser ruby1.8') 
+os.system('apt-get purge -y libruby libruby1.8') 
+
+# Remove selected Mint packages (search for Mint)
+os.system('apt-get purge -y debian-system-adjustments') 
+os.system('apt-get purge -y grub2-theme-mint') 
+os.system('apt-get purge -y mint-backgrounds-debian mint-backgrounds-katya mint-backgrounds-katya-extra')
+os.system('apt-get purge -y mint-stylish-addon')
+
+
+
+
       
 
 #def purge1(package):
