@@ -36,11 +36,52 @@ os.system('apt-get purge -y gimp gimp-data libgimp2.0')
 os.system('apt-get purge -y cups-driver-gutenprint libgutenprint2')
 os.system('apt-get purge -y libgtk2-perl libgnome2-canvas-perl libgnome2-perl')
 
+# Remove Samba
+os.system('apt-get remove -y samba samba-common samba-common-bin')
+
+# Remove Telepathy
+os.system('apt-get remove -y libtelepathy-glib0 vino')
+os.system('apt-get remove -y telepathy-mission-control-5 telepathy-gabble telepathy-salut')
       
       
+     
+      
 
 
+# Remove C compilers (GCC, etc.)
 
+# Remove selected packages from the editors section
+os.system('apt-get remove -y nano vim-common vim-tiny')
+
+# Remove selected packages from the font section
+os.system('apt-get remove -y ttf-bengali-fonts')
+os.system('apt-get remove -y ttf-gujarati-fonts')
+os.system('apt-get remove -y ttf-punjabi-fonts')
+os.system('apt-get remove -y ttf-sazanami-gothic')
+os.system('apt-get remove -y ttf-sazanami-mincho')
+os.system('apt-get remove -y ttf-tamil-fonts')
+os.system('apt-get remove -y ttf-telugu-fonts')
+
+# Remove packages from httpd section
+os.system('apt-get remove -y apache2.2-bin libapache2-mod-dnssd')
+
+# Remove selected packages (cpp) from the interpreter section
+os.system('apt-get remove -y cpp-4.3 gcc-4.3')
+
+# Remove packages from lisp section
+os.system('apt-get remove -y guile-1.8-libs')
+
+# Remove selected packages from the mail section
+os.system('apt-get remove -y exim4-config procmail')
+
+# Remove selected packages from the math section
+os.system('apt-get remove -y dc')
+
+# Remove packages from ruby section
+os.system('apt-get remove -y libdpkg-ruby1.8 libgettext-ruby1.8 liblocale-ruby1.8')
+os.system('apt-get remove -y libhttpclient-ruby1.8 libxml-parser-ruby1.8')
+os.system('apt-get remove -y ruby ruby-xmlparser ruby1.8')      
+      
 
 #def purge1(package):
 #    print 'FAKEpurging ' + package
@@ -58,20 +99,3 @@ print 'FINISHED REMOVING MISC PACKAGES'
 print '==============================='
 
 
-
-
-
-
-
-      
-
-      
-      
-
-
-      
-      
-
-
-print 'FINISHED REMOVING PACKAGES'
-print '======================='
