@@ -28,7 +28,8 @@ print 'BEGIN REMOVING MISC PACKAGES'
 
 def purge_packages(file):
     for line in open(file):
-        os.system('apt-get purge -y ' + line)
+        print 'PURGING ' + line
+        os.system('apt-get purge -s ' + line)
 
 purge_packages("lmde_not_lxde.txt")
 # purge_packages("lmde_not_fluxbox.txt")
