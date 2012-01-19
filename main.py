@@ -104,6 +104,7 @@ os.system('apt-get purge -y debian-system-adjustments')
 os.system('apt-get purge -y grub2-theme-mint') 
 os.system('apt-get purge -y mint-backgrounds-debian mint-backgrounds-katya mint-backgrounds-katya-extra')
 os.system('apt-get purge -y mint-stylish-addon')
+os.system('apt-get purge -y mintinstall-icons')
 
 # Remove Python 3.2
 os.system('apt-get purge -y python3.2 python3 python3-apt wajig')
