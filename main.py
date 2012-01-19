@@ -102,9 +102,6 @@ os.system('apt-get purge -y gcc g++ build-essential dkms ndiswrapper-dkms')
 os.system('apt-get purge -y gcc-4.3-base')
 os.system('apt-get purge -y gcc-4.6 g++ g++-4.6  libstdc++6-4.6-dev')
       
-# Removing selected LibreOffice packages
-os.system('apt-get purge -y libreoffice libreoffice-emailmerge libreoffice-gnome python-uno')
-
 # Removing selected packages from the sound section of Synaptic
 os.system('apt-get purge -y espeak espeak-data libespeak1') #eSpeak
 
