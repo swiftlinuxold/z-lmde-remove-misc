@@ -52,6 +52,10 @@ os.system('apt-get purge -y samba samba-common samba-common-bin')
 os.system('apt-get purge -y libtelepathy-glib0 vino')
 os.system('apt-get purge -y telepathy-mission-control-5 telepathy-gabble telepathy-salut')
 
+# Remove VLC Media Player
+os.system('apt-get purge -y vlc vlc-data vlc-nox vlc-plugin-notify vlc-plugin-pulse')
+os.system('apt-get purge -y libvlc5 libvlccore4')
+
 # Remove selected packages from the editors section
 os.system('apt-get purge -y nano vim-common vim-tiny')
 
