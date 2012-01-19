@@ -25,6 +25,11 @@ else:
 print '============================'
 print 'BEGIN REMOVING MISC PACKAGES'
 
+def purge_packages(file):
+    for line in open(file):
+        print 'PURGING ' + line
+        os.system('apt-get purge -y ' + line)
+
 # Handy commands
 # deborphan -n (package name)
 # sudo apt-get purge -s (package name): simulation only
@@ -55,6 +60,11 @@ os.system('apt-get purge -y telepathy-mission-control-5 telepathy-gabble telepat
 # Remove VLC Media Player
 os.system('apt-get purge -y vlc vlc-data vlc-nox vlc-plugin-notify vlc-plugin-pulse')
 os.system('apt-get purge -y libvlc5 libvlccore4')
+
+# Remove packages from the cli-mono section
+# The cli_mono.txt list was compiled by selecting all cli-mon packages in Synaptic,
+# marking to install them, and going to File -> Save Markings As
+purge_packages(dir_develop + "/remove-misc/cli_mono.txt")
 
 # Remove selected packages from the editors section
 os.system('apt-get purge -y nano vim-common vim-tiny')
