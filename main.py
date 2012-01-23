@@ -52,9 +52,6 @@ os.system('apt-get purge -y libgtk2-perl libgnome2-canvas-perl libgnome2-perl')
 # Remove Giver
 os.system('apt-get purge -y giver')
 
-# Remove MPlayer
-os.system('apt-get purge -y mplayer')
-
 # Remove Samba
 os.system('apt-get purge -y samba samba-common samba-common-bin')
 
