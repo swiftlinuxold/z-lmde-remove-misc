@@ -127,6 +127,11 @@ os.system('apt-get purge -y espeak espeak-data libespeak1') #eSpeak
 # Removing selected packages from the text section of Synaptic
 os.system('apt-get purge -y liblouis-data') #Liblouis
 
+# The following file should be deleted: /home/(username)/.linuxmint/mintMenu/apt.cache
+file_to_delete = dir_user + "/.linuxmint/mintMenu/apt.cache"
+if (os.path.exists(file_to_delete)):
+    os.remove (file_to_delete)
+
 print 'FINISHED REMOVING MISC PACKAGES'
 print '==============================='
 
