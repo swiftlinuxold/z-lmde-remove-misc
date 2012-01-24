@@ -112,10 +112,6 @@ os.system('apt-get purge -y mintinstall-icons')
 os.system('apt-get purge -y python3.2 python3 python3-apt wajig')
 os.system('apt-get purge -y python3.2-minimal python3-minimal')
 
-
-# Remove Python 2.7
-os.system('apt-get purge -y python2.7 python-parted python2.7-minimal')
-
 # Remove selected GCC packages
 os.system('apt-get purge -y gcc g++ build-essential dkms ndiswrapper-dkms')
 os.system('apt-get purge -y gcc-4.3-base')
