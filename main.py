@@ -125,7 +125,6 @@ os.system('apt-get purge -y espeak espeak-data libespeak1') #eSpeak
 
 # Removing selected packages from the text section of Synaptic
 os.system('apt-get purge -y liblouis-data') #Liblouis
-os.system('apt-get purge -y libtextcat-data')
 
 
 # Removing selected packages from the web section of Synaptic
