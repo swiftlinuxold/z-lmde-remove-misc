@@ -118,13 +118,15 @@ os.system('apt-get purge -y gcc-4.3-base')
 os.system('apt-get purge -y gcc-4.6 g++ g++-4.6  libstdc++6-4.6-dev')
 
 # Remove selected Ghostscript packages
-os.system('apt-get purge -y ghostscript-cups ghostscript-x gs')
+os.system('apt-get purge -y ghostscript-cups ghostscript-x gs gs-common')
 
 # Removing selected packages from the sound section of Synaptic
 os.system('apt-get purge -y espeak espeak-data libespeak1') #eSpeak
 
 # Removing selected packages from the text section of Synaptic
 os.system('apt-get purge -y liblouis-data') #Liblouis
+os.system('apt-get purge -y libtextcat-data')
+
 
 # Removing selected packages from the web section of Synaptic
 os.system('apt-get purge -y w3m')
