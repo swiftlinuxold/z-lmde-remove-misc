@@ -116,12 +116,18 @@ os.system('apt-get purge -y python3.2-minimal python3-minimal')
 os.system('apt-get purge -y gcc g++ build-essential dkms ndiswrapper-dkms')
 os.system('apt-get purge -y gcc-4.3-base')
 os.system('apt-get purge -y gcc-4.6 g++ g++-4.6  libstdc++6-4.6-dev')
-      
+
+# Remove selected Ghostscript packages
+os.system('apt-get purge -y ghostscript-cups ghostscript-x gs')
+
 # Removing selected packages from the sound section of Synaptic
 os.system('apt-get purge -y espeak espeak-data libespeak1') #eSpeak
 
 # Removing selected packages from the text section of Synaptic
 os.system('apt-get purge -y liblouis-data') #Liblouis
+
+# Removing selected packages from the web section of Synaptic
+os.system('apt-get purge -y w3m')
 
 # The following file should be deleted: /home/(username)/.linuxmint/mintMenu/apt.cache
 file_to_delete = dir_user + "/.linuxmint/mintMenu/apt.cache"
