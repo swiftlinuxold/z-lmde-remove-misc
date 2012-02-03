@@ -130,6 +130,13 @@ os.system('apt-get purge -y liblouis-data') #Liblouis
 # Removing selected packages from the web section of Synaptic
 os.system('apt-get purge -y w3m')
 
+# Removing g++-4.4 and ibstdc++6-4.4-dev
+os.system('apt-get purge -y g++-4.4 libstdc++6-4.4-dev')
+
+# Removing libflite1 gstreamer0.10-plugins-bad libgstfarsight0.10-0
+os.system('apt-get purge -y libflite1 gstreamer0.10-plugins-bad libgstfarsight0.10-0')
+
+
 # The following file should be deleted: /home/(username)/.linuxmint/mintMenu/apt.cache
 file_to_delete = dir_user + "/.linuxmint/mintMenu/apt.cache"
 if (os.path.exists(file_to_delete)):
