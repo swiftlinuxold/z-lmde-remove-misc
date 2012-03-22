@@ -104,7 +104,6 @@ os.system('apt-get purge -y libruby libruby1.8')
 # Remove selected Mint packages (search for Mint)
 os.system('apt-get purge -y debian-system-adjustments') 
 os.system('apt-get purge -y grub2-theme-mint') 
-os.system('apt-get purge -y mint-backgrounds-debian mint-backgrounds-katya mint-backgrounds-katya-extra')
 os.system('apt-get purge -y mint-stylish-addon')
 os.system('apt-get purge -y mintinstall-icons')
 
