@@ -24,17 +24,32 @@ else:
 # Everything up to this point is common to all Python scripts called by shared-*.sh
 # =================================================================================
 
-print '============================'
-print 'BEGIN REMOVING MISC PACKAGES'
-print 'NOTE: The screen output is suppressed due to excessive volume.'
+def message (string):
+    os.system ('echo ' + string)
+
+message ('============================')
+message ('BEGIN REMOVING MISC PACKAGES')
+message ('NOTE: The screen output is suppressed due to excessive volume.')
 
 def purge_packages (packages):
     os.system ('echo PURGING ' + packages)
     os.system ('apt-get purge -qq ' + packages)
+    
+def purge_packages_file (filename):
+    list_with_newlines = open(filename, 'r').read()
+    list_with_spaces = list_with_newlines.replace ('\n', ' ')
+    os.system ('apt-get purge -qq ' + list_with_spaces)
 
 # Handy commands
 # deborphan -n (package name)
 # sudo apt-get purge -s (package name): simulation only
+# sudo apt-get autoremove (enter N)
+
+# Remove packages from the cli-mono section
+# The cli_mono.txt list was compiled by selecting all cli-mon packages in Synaptic,
+# marking to install them, and going to File -> Save Markings As
+message ('PURGING cli-mono packages')
+purge_packages_file (dir_develop + "/remove-misc/cli_mono.txt")
 
 # Remove Thunderbird (email suite)
 #os.system('apt-get purge -y thunderbird thunderbird-l10n-en-us')
@@ -73,11 +88,6 @@ purge_packages ('telepathy-mission-control-5 telepathy-gabble telepathy-salut')
 purge_packages ('vlc vlc-data vlc-nox vlc-plugin-notify vlc-plugin-pulse')
 #os.system('apt-get purge -y libvlc5 libvlccore4')
 purge_packages ('libvlc5 libvlccore4')
-
-# Remove packages from the cli-mono section
-# The cli_mono.txt list was compiled by selecting all cli-mon packages in Synaptic,
-# marking to install them, and going to File -> Save Markings As
-purge_packages(dir_develop + "/remove-misc/cli_mono.txt")
 
 # Remove selected packages from the editors section
 #os.system('apt-get purge -y nano vim-common vim-tiny')
@@ -178,13 +188,22 @@ purge_packages ('g++-4.4 libstdc++6-4.4-dev')
 #os.system('apt-get purge -y libflite1 gstreamer0.10-plugins-bad libgstfarsight0.10-0')
 purge_packages ('libflite1 gstreamer0.10-plugins-bad libgstfarsight0.10-0')
 
+# Removing packages listed when typing "apt-get autoremove"
+purge_packages ('libcurl3-nss liboauth0 libgdata13')
+purge_packages ('libgail-3-0 libwebkitgtk-3.0-0 libgoa-1.0-0')
+purge_packages ('libgoa-1.0-common')
+purge_packages ('libicu48 libjavascriptcoregtk-3.0-0')
+purge_packages ('librest-0.7-0')
+purge_packages ('libwebkitgtk-3.0-common')
+
+
 
 # The following file should be deleted: /home/(username)/.linuxmint/mintMenu/apt.cache
 file_to_delete = dir_user + "/.linuxmint/mintMenu/apt.cache"
 if (os.path.exists(file_to_delete)):
     os.remove (file_to_delete)
 
-print 'FINISHED REMOVING MISC PACKAGES'
-print '==============================='
+message ('FINISHED REMOVING MISC PACKAGES')
+message ('===============================')
 
 
