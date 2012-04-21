@@ -45,6 +45,9 @@ def purge_packages_file (filename):
 # sudo apt-get purge -s (package name): simulation only
 # sudo apt-get autoremove (enter N)
 
+# Remove Firefox
+purge_packages ('firefox firefox-l10n-en-us')
+
 # Remove packages from the cli-mono section
 # The cli_mono.txt list was compiled by selecting all cli-mon packages in Synaptic,
 # marking to install them, and going to File -> Save Markings As
