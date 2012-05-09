@@ -1,0 +1,5 @@
+libmission-control-plugins0
+libtelepathy-glib0
+telepathy-gabble
+telepathy-salut
+vino
