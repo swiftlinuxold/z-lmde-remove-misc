@@ -187,6 +187,55 @@ purge_packages ('nano vim-common vim-tiny')
 message ('Removing excess fonts')
 purge_packages_file (dir_develop + "/remove-misc/remove-deb/fonts.txt")
 
+# Remove packages from httpd section
+purge_packages ('apache2.2-bin libapache2-mod-dnssd')
+
+# Remove selected packages (cpp) from the interpreter section
+purge_packages ('cpp-4.3 cpp-4.4 g++-4.4 gcc-4.4 libstdc++6-4.4-dev')
+
+# Remove packages from lisp section
+purge_packages ('guile-1.8-libs')
+
+# Remove selected packages from the mail section
+purge_packages ('exim4-config procmail')
+
+# Remove selected packages from the math section
+purge_packages ('dc')
+
+message ('Removing Ruby packages')
+purge_packages_file (dir_develop + "/remove-misc/remove-deb/ruby.txt")
+
+# Remove selected Mint packages (search for Mint)
+purge_packages ('debian-system-adjustments') 
+purge_packages ('grub2-theme-mint') 
+purge_packages ('mint-stylish-addon')
+purge_packages ('mintinstall-icons')
+purge_packages ('mint-backgrounds-debian')
+
+# Remove Python 3.2
+purge_packages ('python3.2 python3 python3-apt wajig')
+purge_packages ('python3.2-minimal python3-minimal')
+
+# Remove selected GCC packages
+purge_packages ('g++ build-essential')
+purge_packages ('gcc-4.3-base gcc-4.4-base')
+purge_packages ('g++-4.6  libstdc++6-4.6-dev')
+
+# Removing selected packages from the sound section
+purge_packages ('espeak espeak-data libespeak1 libgnome-speech7')
+
+# Removing selected packages from the text section of Synaptic
+purge_packages ('liblouis-data') #Liblouis
+
+# Removing selected packages from the web section of Synaptic
+purge_packages ('w3m')
+
+message ('Removing cli-mono packages')
+purge_packages_file (dir_develop + "/remove-misc/remove-deb/cli_mono.txt")
+
+# Enter "deborphan" to view packages with no dependants.
+# Remove selected packages
+purge_packages ('libexempi3')
 
 message ('FINISHED REMOVING MISC PACKAGES')
 message ('===============================')

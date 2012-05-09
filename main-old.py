@@ -93,7 +93,6 @@ purge_packages ('vlc vlc-data vlc-nox vlc-plugin-notify vlc-plugin-pulse')
 purge_packages ('libvlc5 libvlccore4')
 
 # Remove selected packages from the editors section
-#os.system('apt-get purge -y nano vim-common vim-tiny')
 purge_packages ('nano vim-common vim-tiny')
 
 # Remove selected packages from the font section
@@ -113,11 +112,9 @@ purge_packages ('ttf-tamil-fonts')
 purge_packages ('ttf-telugu-fonts')
 
 # Remove packages from httpd section
-#os.system('apt-get purge -y apache2.2-bin libapache2-mod-dnssd')
 purge_packages ('apache2.2-bin libapache2-mod-dnssd')
 
 # Remove selected packages (cpp) from the interpreter section
-#os.system('apt-get purge -y cpp-4.3 gcc-4.3')
 purge_packages ('cpp-4.3 gcc-4.3')
 
 # Remove packages from lisp section

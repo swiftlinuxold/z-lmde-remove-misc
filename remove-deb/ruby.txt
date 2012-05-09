@@ -1,0 +1,10 @@
+libdpkg-ruby1.8
+libgettext-ruby1.8
+libhttpclient-ruby1.8
+liblocale-ruby1.8
+libxml-parser-ruby1.8
+ruby
+ruby-debian
+ruby-httpclient
+ruby-xmlparser
+ruby1.8
