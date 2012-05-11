@@ -217,6 +217,9 @@ purge_packages ('g++ build-essential')
 purge_packages ('gcc-4.3-base gcc-4.4-base')
 purge_packages ('g++-4.6  libstdc++6-4.6-dev')
 
+# Removing packages from the database section
+purge_packages ('unixodbc')
+
 # Removing selected packages from the sound section
 purge_packages ('espeak espeak-data libespeak1 libgnome-speech7')
 
