@@ -8,3 +8,5 @@ ruby-debian
 ruby-httpclient
 ruby-xmlparser
 ruby1.8
+libruby
+libruby1.8
