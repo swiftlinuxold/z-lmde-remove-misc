@@ -108,18 +108,14 @@ purge_packages ('gtk2-engines mint-artwork-debian')
 purge_packages ('gtk2-engines-aurora')
 purge_packages ('gtk2-engines-candido')
 purge_packages ('gtk3-engines-unico')
+purge_packages ('libbonobo2-common libbonobo2-0 libbonobo2-0 libatspi1.0-0')
+purge_packages ('seahorse seahorse-daemon libcryptui0a')
+purge_packages ('zenity zenity-common')
 
-# Remove Seahorse
-purge_packages ('seahorse')
 
 # Remove Tomboy (note taking)
 purge_packages ('tomboy')
 
-# Remove Yelp
-purge_packages ('gnome-doc-utils yelp')
-
-# Remove Zenity
-purge_packages ('zenity')
 
 # Remove GNOME Desktop Environment (universe) and dependants
 purge_packages ('mint-x-icons mint-x-theme')
@@ -137,6 +133,8 @@ purge_packages ('gnome-settings-daemon')
 purge_packages ('gnome-system-tools')
 purge_packages ('policykit-1-gnome libpolkit-gtk-1-0')
 purge_packages ('mintnanny') # MintNanny      
+      
+
 
 if os.path.exists('/usr/share/icons/gnome/icon-theme.cache'):
     print ('Removing /usr/share/icons/gnome/icon-theme.cache')
@@ -219,6 +217,14 @@ purge_packages ('g++-4.6  libstdc++6-4.6-dev')
 
 # Removing packages from the database section
 purge_packages ('unixodbc')
+
+# Remove selected packages from the devel section
+purge_packages ('bison flex libtasn1-3-bin linux-libc-dev libc6-dev')
+
+# Removing packages from the games section
+purge_packages ('cowsay fortune-mod fortunes-husse fortunes-min')
+
+      
 
 # Removing selected packages from the sound section
 purge_packages ('espeak espeak-data libespeak1 libgnome-speech7')
