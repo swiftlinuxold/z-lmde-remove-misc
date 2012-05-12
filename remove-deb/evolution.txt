@@ -1,5 +1,4 @@
 evolution-data-server-common 
-libbeagle1 
 libcamel-1.2-29 
 libcamel1.2-14 
 libcamel1.2-19 

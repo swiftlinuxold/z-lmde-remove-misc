@@ -1,0 +1,10 @@
+gnome-js-common
+gir1.2-peas-1.0
+gir1.2-totem-1.0
+libpeas-1.0-0
+libseed-gtk3-0
+libtotem0
+totem
+totem-common
+libtotem-plparser17
+gir1.2-totem-plparser-1.0

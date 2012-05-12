@@ -1,0 +1,5 @@
+python-zope.interface
+python-twisted-bin
+python-twisted-core
+python-nevow
+python-twisted-web

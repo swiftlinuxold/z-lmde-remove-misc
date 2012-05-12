@@ -1,0 +1,5 @@
+gnome-desktop3-data 
+libgnome-desktop-3-2 
+gnome-settings-daemon 
+nautilus-open-terminal 
+nautilus

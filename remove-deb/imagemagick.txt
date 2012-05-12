@@ -1,0 +1,6 @@
+imagemagick
+mintinstall-icons
+imagemagick-common
+libmagickcore4
+libmagickwand4
+obex-data-server

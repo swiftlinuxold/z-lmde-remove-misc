@@ -1,0 +1,9 @@
+evince 
+evince-common
+gir1.2-evince-3.0 
+gir1.2-sushi-1.0
+gnome-sushi
+gnome-sushi-common
+libevince2 
+libevince3-3 
+libsushi-1.0-0

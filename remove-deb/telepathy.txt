@@ -1,5 +1,5 @@
 libmission-control-plugins0
 libtelepathy-glib0
 telepathy-gabble
+telepathy-mission-control-5
 telepathy-salut
-vino
