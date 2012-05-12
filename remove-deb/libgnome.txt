@@ -1,0 +1,12 @@
+libgnome-mag2 
+libgnome-media-profiles-3.0-0
+libgnome2-canvas-perl
+libgnome2-common
+libgnomecanvas2-0
+libgnome2-canvas-perl
+libgnomecanvas2-common
+libgnomecanvas2-0
+libgnomekbd-common
+libgnomekbd4
+libgnomekbd7
+libgnomeui-common

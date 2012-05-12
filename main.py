@@ -88,7 +88,7 @@ purge_packages ('gtk2-engines mint-artwork-debian')
 purge_packages ('gtk2-engines-aurora')
 purge_packages ('gtk2-engines-candido')
 purge_packages ('gtk3-engines-unico murrine-themes')
-purge_packages ('gucharmap')
+purge_packages ('gucharmap libgucharmap-2-90-7 libgucharmap7')
 purge_packages ('libbonobo2-common libbonobo2-0 libgnome-speech7 libbonoboui2-common')
 purge_packages ('libgnome-menu2 libslab0a libgnome-window-settings1 python-gmenu')
 purge_packages ('seahorse seahorse-daemon libcryptui0a')
@@ -177,6 +177,26 @@ purge_packages ('gcc-4.3-base gcc-4.4-base')
 
 message ('PART 2: search for python3, remove selected packages')
 purge_packages_file (dir_develop + "/remove-misc/remove-deb/python3.txt")
+
+# PART 3: Enter 'deborphan', remove selected packages
+
+message ('PART 3: search for libgnome, remove selected packages')
+purge_packages_file (dir_develop + "/remove-misc/remove-deb/libgnome.txt")
+
+message ('PART 3: search for webkit, remove selected packages')
+purge_packages ('libwebkit-1.0-2 libwebkit-1.0-common')
+
+message ('PART 3: search for libmatroska, remove selected packages')
+purge_packages ('libmatroska0 libmatroska4 libmatroska5')
+
+message ('PART 3: search for magick, remove selected packages')
+purge_packages ('libmagickcore3 libmagickwand3')
+
+message ('PART 3: remove libicu44')
+purge_packages ('libicu44') # Leave libicu48 in place
+
+
+      
 
 
 if os.path.exists('/usr/share/icons/gnome/icon-theme.cache'):
