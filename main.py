@@ -45,32 +45,37 @@ message ('============================')
 message ('BEGIN REMOVING MISC PACKAGES')
 message ('NOTE: The screen output is suppressed due to excessive volume.')
 
-# PART 1: REMOVING PACKAGES FROM SELECTED SECTIONS + RELATED PACKAGES
+# PART 2: REMOVING PACKAGES FROM SELECTED SECTIONS + RELATED PACKAGES
 # Synaptic -> Preferences -> show Section
 # Then sort by Section
 # Use Synaptic to search for related packages
 # Use 'deborphan' and 'deborphan -n' commands to search for related packages
 
-message ('PART 1: removing packages from the database section')
+message ('PART 1: removing zenity, zenity-common, and libdecoration0')
+message ('Removing these packages later can trigger the installation of many unwanted packages.')
+purge_packages ('zenity zenity-common')
+purge_packages ('libdecoration0')
+
+message ('PART 2: removing packages from the database section')
 purge_packages ('unixodbc libodbc1 odbcinst odbcinst1debian2')
 
-message ('PART 1: removing selected packages from the devel section')
+message ('PART 2: removing selected packages from the devel section')
 purge_packages ('bison libbison-dev')
 purge_packages ('flex')
 purge_packages ('g++-4.4 libstdc++6-4.4-dev')
 purge_packages ('gcc-4.4 cpp-4.4 gcc-4.4')
 purge_packages ('libtasn1-3-bin')
       
-message ('PART 1: removing selected packages from the editors section')
+message ('PART 2: removing selected packages from the editors section')
 purge_packages ('nano vim-common vim-tiny')
 
-message ('PART 1: removing selected fonts')
+message ('PART 2: removing selected fonts')
 purge_packages_file (dir_develop + "/remove-misc/remove-deb/fonts.txt")
 
-message ('PART 1: removing packages from the games section')
+message ('PART 2: removing packages from the games section')
 purge_packages ('cowsay fortune-mod fortunes-husse fortunes-min')
 
-message ('PART 1: removing packages from the gnome section')
+message ('PART 2: removing packages from the gnome section')
 purge_packages ('at-spi libatspi1.0-0')
 purge_packages ('brasero brasero-common libbrasero-media3-1')
 purge_packages_file (dir_develop + "/remove-misc/remove-deb/evince.txt")
@@ -94,105 +99,103 @@ purge_packages ('libgnome-menu2 libslab0a libgnome-window-settings1 python-gmenu
 purge_packages ('seahorse seahorse-daemon libcryptui0a')
 purge_packages ('tomboy')      
 purge_packages ('vino')
-purge_packages ('zenity zenity-common')
 
-message ('PART 1: removing packages from the graphics section')
+message ('PART 2: removing packages from the graphics section')
 purge_packages_file (dir_develop + "/remove-misc/remove-deb/gimp_gutenprint.txt")
 purge_packages ('gtk2-engines-pixbuf')
 purge_packages_file (dir_develop + "/remove-misc/remove-deb/imagemagick.txt")
 
-message ('PART 1: removing packages from the httpd section')
+message ('PART 2: removing packages from the httpd section')
 purge_packages ('apache2.2-bin libapache2-mod-dnssd')
 
-message ('PART 1: removing packages from the interpreters section')
+message ('PART 2: removing packages from the interpreters section')
 purge_packages ('cpp-4.3')
 # Totem is removed here
 purge_packages_file (dir_develop + "/remove-misc/remove-deb/gnome-js-common.txt")
 purge_packages ('m4')
 purge_packages ('tcl tcl8.4 tcl8.5')
 
-message ('PART 1: removing packages from the lisp section')
+message ('PART 2: removing packages from the lisp section')
 purge_packages ('guile-1.8-libs')
 
-message ('PART 1: removing packages from the mail section')
+message ('PART 2: removing packages from the mail section')
 purge_packages ('exim4-config procmail')
 purge_packages ('thunderbird thunderbird-l10n-en-us')
 
-message ('PART 1: removing packages from the math section')
+message ('PART 2: removing packages from the math section')
 purge_packages ('dc')
 
-message ('PART 1: removing packages from the misc section')
+message ('PART 2: removing packages from the misc section')
 purge_packages ('grub2-theme-mint')
 purge_packages ('libpango1.0-common')
 
-message ('PART 1: removing packages from the net section')
+message ('PART 2: removing packages from the net section')
 purge_packages ('dnsmasq-base')
 purge_packages ('libpurple-bin libpurple0 pidgin pidgin-data pidgin-facebookchat ')
 purge_packages ('samba samba-common samba-common-bin')
 purge_packages_file (dir_develop + "/remove-misc/remove-deb/telepathy.txt")
 purge_packages ('xchat-common xchat')
 
-message ('PART 1: removing packages from the ruby section')
+message ('PART 2: removing packages from the ruby section')
 purge_packages_file (dir_develop + "/remove-misc/remove-deb/ruby.txt")
 
-message ('PART 1: removing packages from the sound section')
+message ('PART 2: removing packages from the sound section')
 purge_packages ('banshee banshee-extension-soundmenu')
 purge_packages ('espeak espeak-data libespeak1')
 
-message ('PART 1: removing packages from the text section')
+message ('PART 2: removing packages from the text section')
 purge_packages ('liblouis-data')
 
-message ('PART 1: removing packages from the universe/gnome section')
+message ('PART 2: removing packages from the universe/gnome section')
 purge_packages ('mint-x-icons mint-x-theme')
 
-message ('PART 1: removing packages from the video section')
+message ('PART 2: removing packages from the video section')
 purge_packages ('vlc vlc-data vlc-nox vlc-plugin-notify vlc-plugin-pulse')
 purge_packages ('libvlc5 libvlccore4')
 
-message ('PART 1: removing packages from the web section')
+message ('PART 2: removing packages from the web section')
 purge_packages ('firefox firefox-l10n-en-us mint-search-addon mint-stylish-addon')
 purge_packages ('w3m')
 
-message ('PART 1: removing packages from the x11 section')
+message ('PART 2: removing packages from the x11 section')
 purge_packages ('gtk2-engines-murrine')
-purge_packages ('libdecoration0')
 purge_packages ('mate-notification-daemon libmateconf libmatecorba libmatenotify')
 purge_packages ('ttf-wqy-microhei')
 
-message ('PART 1: removing packages from the zope section')
+message ('PART 2: removing packages from the zope section')
 purge_packages_file (dir_develop + "/remove-misc/remove-deb/zope.txt")
 
-message ('PART 1: removing packages from the cli-mono section')
+message ('PART 2: removing packages from the cli-mono section')
 purge_packages_file (dir_develop + "/remove-misc/remove-deb/cli_mono.txt")
 
 
-# PART 2: Description + Name search for a key word, remove selected packages
-message ('PART 2: search for Mint, remove selected packages')
+# PART 3: Description + Name search for a key word, remove selected packages
+message ('PART 3: search for Mint, remove selected packages')
 purge_packages ('debian-system-adjustments')
 purge_packages ('mint-backgrounds-debian')
 purge_packages ('mint-mdm-themes')    
 
-message ('PART 2: search for gcc, remove selected packages')
+message ('PART 3: search for gcc, remove selected packages')
 purge_packages ('gcc-4.3-base gcc-4.4-base')
 
-message ('PART 2: search for python3, remove selected packages')
+message ('PART 3: search for python3, remove selected packages')
 purge_packages_file (dir_develop + "/remove-misc/remove-deb/python3.txt")
 
-# PART 3: Enter 'deborphan', remove selected packages
+# PART 4: Enter 'deborphan', remove selected packages
 
-message ('PART 3: search for libgnome, remove selected packages')
+message ('PART 4: search for libgnome, remove selected packages')
 purge_packages_file (dir_develop + "/remove-misc/remove-deb/libgnome.txt")
 
-message ('PART 3: search for webkit, remove selected packages')
+message ('PART 4: search for webkit, remove selected packages')
 purge_packages ('libwebkit-1.0-2 libwebkit-1.0-common')
 
-message ('PART 3: search for libmatroska, remove selected packages')
+message ('PART 4: search for libmatroska, remove selected packages')
 purge_packages ('libmatroska0 libmatroska4 libmatroska5')
 
-message ('PART 3: search for magick, remove selected packages')
+message ('PART 4: search for magick, remove selected packages')
 purge_packages ('libmagickcore3 libmagickwand3')
 
-message ('PART 3: remove libicu44')
+message ('PART 4: remove libicu44')
 purge_packages ('libicu44') # Leave libicu48 in place
 
 
