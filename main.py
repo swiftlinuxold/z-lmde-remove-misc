@@ -122,9 +122,6 @@ message ('PART 2: removing packages from the mail section')
 purge_packages ('exim4-config procmail')
 purge_packages ('thunderbird thunderbird-l10n-en-us')
 
-message ('PART 2: removing packages from the math section')
-purge_packages ('dc')
-
 message ('PART 2: removing packages from the misc section')
 purge_packages ('grub2-theme-mint')
 purge_packages ('libpango1.0-common')
