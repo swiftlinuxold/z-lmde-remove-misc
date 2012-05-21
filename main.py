@@ -45,16 +45,18 @@ message ('============================')
 message ('BEGIN REMOVING MISC PACKAGES')
 message ('NOTE: The screen output is suppressed due to excessive volume.')
 
-# PART 2: REMOVING PACKAGES FROM SELECTED SECTIONS + RELATED PACKAGES
+# PART 1: REMOVING PACKAGES FROM SELECTED SECTIONS + RELATED PACKAGES
 # Synaptic -> Preferences -> show Section
 # Then sort by Section
 # Use Synaptic to search for related packages
 # Use 'deborphan' and 'deborphan -n' commands to search for related packages
 
-message ('PART 1: removing zenity, zenity-common, and libdecoration0')
-message ('Removing these packages later can trigger the installation of many unwanted packages.')
-purge_packages ('zenity zenity-common')
-purge_packages ('libdecoration0')
+# KEEPING zenity, zenity-common, and libdecoration0 because efforts to remove them in chroot
+# force the installation of much heavier packages .
+# message ('PART 1: removing zenity, zenity-common, and libdecoration0')
+# message ('Removing these packages later can trigger the installation of many unwanted packages.')
+# purge_packages ('zenity zenity-common')
+# purge_packages ('libdecoration0')
 
 message ('PART 2: removing packages from the database section')
 purge_packages ('unixodbc libodbc1 odbcinst odbcinst1debian2')
